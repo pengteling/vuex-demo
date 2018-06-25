@@ -2,6 +2,7 @@
   <div>
     <p>
       A组件
+      {{ $store.state.count }}
     </p>
     <B></B>
   </div>
@@ -9,6 +10,9 @@
 <script>
 import B from './B'
 export default {
-  components: {B}
+  components: {B},
+  mounted () {
+    console.log(this.$store.state.count)
+  }
 }
 </script>
